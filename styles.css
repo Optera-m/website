@@ -1,5 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 :root {
-    --px-small: 10px;
+    --px-small: 1em;
+    --px-medium: 0.6em;
+    --kleur-achtergrond: #FEFEFE;
+    --kleur-primair: #2DD4E0;
+    --kleur-secundair: #E0762D;
+    --kleur-tekst: #36322F;
+
 }
 @media screen and (max-width: 767px) {
     nav {
@@ -7,31 +14,40 @@
     }
 
 }
-html {
-    border-top: 2px solid #2DD4E0;
+* {
     padding: 0;
     margin: 0;
-    color: #36322F;
-    font-family: Arial, sans-serif;
+    color: var(--kleur-tekst);
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: #FFFFFF;
+}
+html {
+    border-top: 2px solid var(--kleur-primair);
+    background-color: var(--kleur-achtergrond);
 }
 body {
     max-width: 1000px;
     margin: auto;
     padding: var(--px-small);
+    padding-top: var(--px-medium);
+    background-color: var(--kleur-achtergrond);
+
 }
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--kleur-achtergrond);
+
 }
 .logo {
     font-size: 24px;
     font-weight: bold;
-    color: #2DD4E0;
+    color: var(--kleur-primair);
 }
 nav {
-    /* border: 1px solid #eee;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); */
     margin: 20px auto;
     padding: 10px;
     width: 100%;
@@ -47,14 +63,14 @@ nav li {
     list-style-type: none;
 }
 nav a {
-    color: #36322F;
+    color: var(--kleur-tekst);
     text-decoration: none;
     margin-right: 15px;
     display: block;
     width: auto;
 }
 nav a:hover {
-    color: #E0762D;
+    color: var(--kleur-secundair);
 }
 .content {
     line-height: 1.6;
@@ -62,10 +78,13 @@ nav a:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
     margin: 20px auto;
     padding: var(--px-small);
+    padding-top: var(--px-medium);
+    
 }
 footer {
     margin-top: 20px;
     padding-top: var(--px-small);
-    border-top: 1px solid #ddd;
     font-size: 0.9em;
+    background-color: var(--kleur-achtergrond);
+
 }
