@@ -23,12 +23,8 @@
     text-align: center;
 }
 
-html {
-    border-top: 2px solid var(--kleur-primair);
-    z-index: -2;
-
-}
 .background{
+    border-top: 2px solid var(--kleur-primair);
     background-image: url("stuff/optera\ logo\ zonder\ tekst.svg");
     background-repeat: no-repeat;
     background-position: right;
