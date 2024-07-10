@@ -118,6 +118,6 @@ footer {
         flex-direction: column;
     }
     nav ul {
-justify-content: space-between;    }
+justify-content: left;    }
 
 }
