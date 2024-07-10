@@ -25,6 +25,7 @@
 
 html {
     border-top: 2px solid var(--kleur-primair);
+    z-index: -2;
 
 }
 .background{
