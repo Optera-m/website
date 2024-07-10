@@ -23,10 +23,14 @@
     text-align: center;
 }
 
-html {
+.randje {
     border-top: 2px solid var(--kleur-primair);
     z-index: -2;
-
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
 }
 .background{
     background-image: url("stuff/optera\ logo\ zonder\ tekst.svg");
