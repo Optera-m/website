@@ -1,9 +1,13 @@
 :root {
-    --px-small: 10px;
+    --px-small: 0.625em;
 }
 @media screen and (max-width: 767px) {
     nav {
         flex-direction: column;
+    }
+    nav img {
+        display: block;
+        justify-content: space-between;
     }
 
 }
@@ -30,13 +34,16 @@ header {
     color: #2DD4E0;
 }
 nav {
-    /* border: 1px solid #eee;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); */
     margin: 20px auto;
+    margin-top: 0;
     padding: 10px;
     width: 100%;
     display: flex;
     justify-content: space-between;
+}
+nav img {
+    width: 2.617924em;
+    margin: 0 auto;
 }
 nav ul {
     display: flex;
@@ -63,6 +70,31 @@ nav a:hover {
     margin: 20px auto;
     padding: var(--px-small);
 }
+.formulier {
+    line-height: 1.6;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    margin: 20px auto;
+    padding: var(--px-small);
+}
+.formulier fieldset {
+    display: block;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-top: 0.35em;
+    padding-bottom: 0.625em;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    border: none;
+  }
+.formulier input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 1px solid #36322F;
+  }
 footer {
     margin-top: 20px;
     padding-top: var(--px-small);
