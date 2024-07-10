@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optera bv</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Optera bv</div>
+            <ul>
+                <li><a href="index.html">
+                        <div>Home</div>
+                    </a></li>
+                <li><a href="index.html">
+                        <div>Services</div>
+                    </a></li>
+                <li><a href="contact.html">
+                        <div>Contact</div>
+                    </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <form class="formulier" action="https://n8n.spliert.myds.me/webhook/contact-optera-form" method="post">
+            <fieldset>
+            
+            <!-- Form Name -->
+            <legend>Contact Formulier</legend>
+            
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="name">Jouw naam</label>  
+              <input id="name" name="name" type="text" placeholder="vb: Maarten Mertens" class="form-control input-md" required="">
+            </div>
+            
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="email">Jouw E-mail</label>  
+              <div class="col-md-4">
+              <input id="email" name="email" type="text" placeholder="vb: maarten@optera.be" class="form-control input-md" required="">
+                
+              </div>
+            </div>
+            
+            <!-- Textarea -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="vraag">Jouw vraag</label>
+              <div class="col-md-4">                     
+                <textarea class="form-control" id="vraag" name="vraag"></textarea>
+              </div>
+            </div>
+            
+            <!-- Button -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="submit">Verzenden</label>
+              <div class="col-md-4">
+                <button id="submit" name="submit" class="btn btn-primary">Verzenden</button>
+              </div>
+            </div>
+            
+            </fieldset>
+            </form>
+            
+    <footer>
+        &copy; 2024 Optera bv. All rights reserved.
+    </footer>
+</body>
+
+</html>
