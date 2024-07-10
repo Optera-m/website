@@ -1,23 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 :root {
-    --px-small: 1em;
-    --px-medium: 0.6em;
+    --px-medium: 1em;
+    --px-small: 0.618em;
     --kleur-achtergrond: #FEFEFE;
     --kleur-primair: #2DD4E0;
     --kleur-secundair: #E0762D;
     --kleur-tekst: #36322F;
 
 }
-@media screen and (max-width: 767px) {
-    nav {
-        flex-direction: column;
-    }
-    nav img {
-        display: block;
-        justify-content: space-between;
-    }
 
-}
 * {
     padding: 0;
     margin: 0;
@@ -120,5 +111,13 @@ footer {
     padding-top: var(--px-small);
     font-size: 0.9em;
     background-color: var(--kleur-achtergrond);
+
+}
+@media screen and (max-width: 767px) {
+    nav {
+        flex-direction: column;
+    }
+    nav ul {
+justify-content: space-between;    }
 
 }
