@@ -66,6 +66,12 @@
     z-index: -1;
     opacity: 0.1;
 }
+a.fill-div {
+    display: block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+}
 body {
     
     max-width: 1000px;
@@ -127,15 +133,13 @@ nav a:hover {
 
 .content {
     line-height: 1.6;
-    /* border: 1px solid #eee;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); */
     margin: 20px auto;
     padding: var(--px-small);
     padding-top: var(--px-medium);
 
 }
 
-div .doos {
+.doos {
     line-height: 1.6;
     border: 1px solid #eee;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
@@ -182,6 +186,27 @@ footer {
     font-size: 0.9em;
 
 }
+.container {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+    gap: var(--px-small) var(--px-medium);
+    flex-wrap: wrap;
+}
+.container a {
+    box-shadow: 0 0 10px rgba(50, 0, 0, 0.15);
+    border-radius: var(--px-small);
+    cursor:pointer;
+    background-color:var(--kleur-achtergrond);
+    display:block;
+    text-align:center;
+    margin-top:8px;
+    text-decoration: none;
+    padding: var(--px-small);
+    min-width: 200px;
+}
 
 @media screen and (max-width: 767px) {
     nav {
@@ -196,6 +221,11 @@ footer {
     }
     div .doos {
         width: 80vw
+    }
+    .container {
+        align-items: stretch stretch;
+        width: 80vw;
+        flex-direction: column;
     }
 
 }
