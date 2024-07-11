@@ -31,6 +31,15 @@
         transform: rotate(0deg);
 	}
 }
+@keyframes appear {
+    0%{
+        transform: rotateX(-45deg) translateY(100px) scale(1.2);
+        
+    }
+    100%{
+        transform: rotateX(0) translateY(0) scale(1);
+    }
+}
 
 * {
     padding: 0;
@@ -41,7 +50,6 @@
     font-style: normal;
     text-align: center;
 }
-
 .randje {
     border-top: 2px solid var(--kleur-primair);
     z-index: -2;
