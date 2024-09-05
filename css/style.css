@@ -486,6 +486,9 @@ a:focus {
   margin-bottom: 30px;
 }
 
+.contact_section {
+  text-align: center;
+}
 .contact_section input {
   width: 100%;
   border: none;
