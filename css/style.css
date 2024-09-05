@@ -250,6 +250,9 @@ a:focus {
   background-color: transparent;
   color: #489BA1;
 }
+.slider_section .img-box {
+  text-align: center;
+}
 .slider_section .img-box img {
   width: 70%;
 }
