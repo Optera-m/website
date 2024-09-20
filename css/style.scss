@@ -340,6 +340,7 @@ a:focus {
     a {
       @include hero_btn($primary2, $white, 10px, 45px, 5px);
       margin-top: 15px;
+      border-radius: 3px;
     }
   }
 
@@ -443,7 +444,7 @@ a:focus {
 
     a {
       margin-top: 15px;
-      @include hero_btn($primary1, $white, 10px, 45px, 2px);
+      @include hero_btn($primary1, $white, 10px, 45px, 5px);
     }
   }
 
@@ -488,7 +489,7 @@ a:focus {
 
     a {
       margin-top: 25px;
-      @include hero_btn($primary2, $white, 10px, 45px, 2px);
+      @include hero_btn($primary2, $white, 10px, 45px, 5px);
 
     }
   }
@@ -556,7 +557,7 @@ a:focus {
     margin-top: 45px;
 
     a {
-      @include hero_btn($primary1, $white, 10px, 45px, 0);
+      @include hero_btn($primary1, $white, 10px, 45px, 5px);
     }
   }
 }
@@ -670,7 +671,7 @@ a:focus {
 
   button {
     border: none;
-    @include hero_btn($primary1, $white, 10px, 55px, 0);
+    @include hero_btn($primary1, $white, 10px, 55px, 5px);
     margin-top: 15px;
   }
 

@@ -245,6 +245,7 @@ a:focus {
   border-radius: 5px;
   color: #ffffff;
   margin-top: 15px;
+  border-radius: 3px;
 }
 .slider_section .detail-box a:hover {
   background-color: transparent;
@@ -325,7 +326,7 @@ a:focus {
   padding: 10px 45px;
   background-color: #2DD4E0;
   border: 1px solid #2DD4E0;
-  border-radius: 2px;
+  border-radius: 5px;
   color: #ffffff;
 }
 .about_section .detail-box a:hover {
@@ -362,7 +363,7 @@ a:focus {
   padding: 10px 45px;
   background-color: #489BA1;
   border: 1px solid #489BA1;
-  border-radius: 2px;
+  border-radius: 5px;
   color: #ffffff;
 }
 .professional_section .detail-box a:hover {
@@ -423,7 +424,7 @@ a:focus {
   padding: 10px 45px;
   background-color: #2DD4E0;
   border: 1px solid #2DD4E0;
-  border-radius: 0;
+  border-radius: 5px;
   color: #ffffff;
 }
 .service_section .btn-box a:hover {
@@ -517,7 +518,7 @@ a:focus {
   padding: 10px 55px;
   background-color: #2DD4E0;
   border: 1px solid #2DD4E0;
-  border-radius: 0;
+  border-radius: 5px;
   color: #ffffff;
   margin-top: 15px;
 }
