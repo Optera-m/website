@@ -1,4 +1,16 @@
+const headerElement = document.querySelector("header");
 const footerElement = document.querySelector("footer");
+
+const fetchHeader = async () => {
+  try {
+    const res = await fetch("./header.txt");
+    const template = await res.text();
+
+    headerElement.innerHTML = template;
+  } catch (err) {
+    console.log(err);
+  }
+};
 
 const fetchFooter = async () => {
   try {
@@ -11,4 +23,5 @@ const fetchFooter = async () => {
   }
 };
 
+fetchHeader();
 fetchFooter();

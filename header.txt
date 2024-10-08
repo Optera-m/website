@@ -1,0 +1,50 @@
+<div class="header_top">
+        <div class="container-fluid">
+          <div class="contact_nav">
+            <a href="tel:0032469477694">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <span>
+                Bel ons : +32469477694
+              </span>
+            </a>
+            <a href="mailto:maarten@optera.be">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>
+                Email : maarten@optera.be
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+            <a class="navbar-brand" href="index.html">
+              <span>
+                <img src="images/optera logo zonder cirkel.svg" alt="Optera logo without circle">
+              </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">Over</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="service.html">Services</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">Contacteer ons</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
