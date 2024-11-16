@@ -611,4 +611,114 @@ a:focus {
   background-color: #fff;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.qr-landing .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.qr-landing .alert-section {
+  background-color: #489BA1;
+  color: #ffffff;
+  padding: 25px;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 15px 0 rgba(54, 50, 47, 0.2);
+}
+.qr-landing .maintenance-section,
+.qr-landing .contact-section {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  box-shadow: 0 0 15px 0 rgba(54, 50, 47, 0.2);
+}
+.qr-landing h1,
+.qr-landing h2 {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #36322F;
+  margin-bottom: 20px;
+}
+.qr-landing .landing-btn {
+  display: inline-block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  text-transform: uppercase;
+  padding: 10px 45px;
+  background-color: #489BA1;
+  border: 1px solid #489BA1;
+  border-radius: 5px;
+  color: #ffffff;
+  margin: 10px 0;
+}
+.qr-landing .landing-btn:hover {
+  background-color: transparent;
+  color: #489BA1;
+}
+.qr-landing .landing-btn.whatsapp-btn {
+  background-color: #2DD4E0;
+  border-color: #2DD4E0;
+}
+.qr-landing .landing-btn.whatsapp-btn:hover {
+  background-color: transparent;
+  color: #2DD4E0;
+}
+.qr-landing .landing-btn.mail-btn {
+  background-color: #A3D1D4;
+  border-color: #A3D1D4;
+}
+.qr-landing .landing-btn.mail-btn:hover {
+  background-color: transparent;
+  color: #A3D1D4;
+}
+.qr-landing .steps {
+  list-style-type: decimal;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+.qr-landing .highlight {
+  background-color: #A3D1D4;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 15px 0;
+  color: #36322F;
+}
+.qr-landing .highlight ul {
+  list-style: none;
+  padding-left: 0;
+}
+.qr-landing .highlight ul li {
+  margin-bottom: 10px;
+}
+.qr-landing .highlight ul li:last-child {
+  margin-bottom: 0;
+}
+.qr-landing .contact-info {
+  margin-top: 20px;
+}
+.qr-landing .contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+.qr-landing .contact-info ul li {
+  margin: 10px 0;
+  color: #36322F;
+}
+@media (max-width: 768px) {
+  .qr-landing .container {
+    padding: 15px;
+  }
+  .qr-landing .landing-btn {
+    width: 100%;
+    text-align: center;
+    margin: 5px 0;
+  }
+}
+
+.qr-landing {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  color: #36322F;
+  background-color: #f5f5f5;
 }/*# sourceMappingURL=style.css.map */

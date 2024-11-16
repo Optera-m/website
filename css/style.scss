@@ -791,3 +791,122 @@ a:focus {
 
 
 
+.qr-landing {
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .alert-section {
+    background-color: $primary2;
+    color: $white;
+    padding: 25px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 15px 0 rgba($black, 0.2);
+  }
+
+  .maintenance-section,
+  .contact-section {
+    background-color: $white;
+    padding: 25px;
+    border-radius: 5px;
+    margin-bottom: 25px;
+    box-shadow: 0 0 15px 0 rgba($black, 0.2);
+  }
+
+  h1,
+  h2 {
+    @include secondary-font();
+    font-weight: bold;
+    text-transform: uppercase;
+    color: $black;
+    margin-bottom: 20px;
+  }
+
+  .landing-btn {
+    @include hero_btn($primary2, $white, 10px, 45px, 5px);
+    margin: 10px 0;
+    
+    &.whatsapp-btn {
+      background-color: $primary1;
+      border-color: $primary1;
+      
+      &:hover {
+        background-color: transparent;
+        color: $primary1;
+      }
+    }
+    
+    &.mail-btn {
+      background-color: $secondary;
+      border-color: $secondary;
+      
+      &:hover {
+        background-color: transparent;
+        color: $secondary;
+      }
+    }
+  }
+
+  .steps {
+    list-style-type: decimal;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .highlight {
+    background-color: $secondary;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+    color: $black;
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+      
+      li {
+        margin-bottom: 10px;
+        
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  .contact-info {
+    margin-top: 20px;
+
+    ul {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin: 10px 0;
+        color: $black;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 15px;
+    }
+
+    .landing-btn {
+      width: 100%;
+      text-align: center;
+      margin: 5px 0;
+    }
+  }
+}
+
+// Voeg deze class toe aan de body of een wrapper div van de landing page
+.qr-landing {
+  @include main-font;
+  color: $black;
+  background-color: #f5f5f5;
+}
