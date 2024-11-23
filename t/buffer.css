@@ -141,6 +141,7 @@ button {
     border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s ease;
+    touch-action: manipulation;
 }
 
 button:disabled {
