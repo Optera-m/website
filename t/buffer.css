@@ -13,8 +13,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 0; /* Remove padding for full-height view */
     line-height: 1.6; /* Improve readability */
+    height: 100vh; /* Make sure the body takes full height */
 }
 
 /* Container */
@@ -30,6 +31,8 @@ body {
     justify-content: flex-start;
     align-items: center;
     transition: all 0.3s ease;
+    height: 100%; /* Make container take up full screen height */
+    overflow-y: auto; /* Ensure scrolling if content overflows */
 }
 
 /* Header */
@@ -164,12 +167,12 @@ header h1 {
 
 .chart-section {
     flex: 1;
-    width: 100%; /* Set the chart section width to 48% */
+    width: 100%; /* Set the chart section width to 100% for larger charts */
 }
 
 .chart-section canvas {
     width: 100%;
-    max-height: 350px;
+    max-height: 500px; /* Increase max height for bigger charts */
     border-radius: 15px;
 }
 
@@ -193,12 +196,17 @@ footer {
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    .input-section {
-        grid-template-columns: 1fr;
+    body {
+        padding: 0; /* Remove padding */
     }
 
     .container {
         padding: 20px;
+        height: 100%; /* Make sure container takes full height */
+    }
+
+    .input-section {
+        grid-template-columns: 1fr;
     }
 
     .charts-wrapper {
@@ -207,8 +215,8 @@ footer {
     }
 
     .chart-section {
-        width: 100%;
-        margin-left: 0; /* Remove left margin on small screens */
+        width: 100%; /* Full width for charts */
+        max-height: 500px; /* Increase chart height on small screens */
     }
 
     #calculations {
@@ -217,5 +225,9 @@ footer {
 
     .results-wrapper {
         flex-direction: column;
+    }
+
+    footer {
+        font-size: 0.8rem; /* Slightly smaller footer text for mobile */
     }
 }
