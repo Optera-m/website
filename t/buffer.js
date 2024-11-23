@@ -196,3 +196,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     calculateResults();
 });
+document.addEventListener("DOMContentLoaded", () => {
+    const inputs = document.querySelectorAll(".input-wrapper input");
+    const buttons = document.querySelectorAll(".btn-minus, .btn-plus");
+
+    // Add event listeners for buttons
+    buttons.forEach((button) => {
+        button.addEventListener("click", (e) => {
+            const input = e.target.parentElement.querySelector("input");
+            const step = parseFloat(button.getAttribute("data-step"));
+            const value = parseFloat(input.value) || 0;
+
+            let newValue = button.classList.contains("btn-plus")
+                ? value + step
+                : value - step;
+
+            newValue = parseFloat(newValue.toFixed(5)); // Avoid floating-point issues
+            input.value = newValue > 0 ? newValue : 0; // Ensure no negative values
+            input.dispatchEvent(new Event("input")); // Trigger 'input' event for calculations
+        });
+    });
+
+    // Ensure calculations trigger on direct input changes
+    inputs.forEach((input) => {
+        input.addEventListener("input", calculateResults);
+    });
+
+    // Initial calculation
+    calculateResults();
+});

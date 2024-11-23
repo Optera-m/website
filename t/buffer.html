@@ -18,7 +18,6 @@
       <h1>Pomp Buffer Calculator</h1>
     </header>
     <div class="alert">
-
       <div class="alert-header" onclick="toggleReference()">
         <h2>Referenties</h2>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
@@ -26,7 +25,6 @@
           <polyline points="6 9 12 15 18 9"></polyline>
         </svg>
       </div>
-
       <div class="alert-content">
         <p><strong>Rainfall Intensity (m³/m²/hour):</strong></p>
         <ul>
@@ -37,14 +35,12 @@
           <li><strong>Typical Parking Area Rainfall Intensity:</strong> 0.015 (15mm/hour)</li>
           <li><strong>Typical Roof Area Rainfall Intensity:</strong> 0.02 (20mm/hour)</li>
         </ul>
-
         <p><strong>Design Storm Return Periods:</strong></p>
         <ul>
           <li>1-year storm: 0.025 (25mm/hour)</li>
           <li>10-year storm: 0.045 (45mm/hour)</li>
           <li>100-year storm: 0.07 (70mm/hour)</li>
         </ul>
-
         <p><strong>Typical Design Durations:</strong></p>
         <ul>
           <li>Minimum: 2 hours</li>
@@ -52,7 +48,6 @@
           <li>Extended: 24 hours</li>
           <li>Extreme: 72 hours</li>
         </ul>
-
         <p><strong>Buffer Sizing Guidelines:</strong></p>
         <ul>
           <li>Minimum: 1 hour retention</li>
@@ -60,43 +55,72 @@
           <li>Conservative: 8 hours retention</li>
         </ul>
       </div>
-
-
     </div>
-
 
     <div class="input-section">
       <div class="input-group">
         <label for="parkingArea">Parking Area (m²)</label>
-        <input type="number" id="parkingArea" name="parkingArea" value="0" step="100">
+        <div class="input-wrapper">
+          <input type="number" id="parkingArea" name="parkingArea" value="0" step="100" data-step="100">
+          <button class="btn-minus" data-step="100">-</button>
+          <button class="btn-plus" data-step="100">+</button>
+        </div>
       </div>
       <div class="input-group">
         <label for="roofArea">Roof Area (m²)</label>
-        <input type="number" id="roofArea" name="roofArea" value="500" step="100">
+        <div class="input-wrapper">
+          <input type="number" id="roofArea" name="roofArea" value="500" step="100" data-step="100">
+          <button class="btn-minus" data-step="100">-</button>
+          <button class="btn-plus" data-step="100">+</button>
+        </div>
       </div>
       <div class="input-group">
         <label for="parkingRainfallIntensity">Rainfall Intensity Parking (m³/m²/hour)</label>
-        <input type="number" id="parkingRainfallIntensity" name="parkingRainfallIntensity" step="0.001" value="0.015">
+        <div class="input-wrapper">
+          <input type="number" id="parkingRainfallIntensity" name="parkingRainfallIntensity" step="0.001" value="0.015" data-step="0.001">
+          <button class="btn-minus" data-step="0.001">-</button>
+          <button class="btn-plus" data-step="0.001">+</button>
+        </div>
       </div>
       <div class="input-group">
         <label for="roofRainfallIntensity">Rainfall Intensity Roof (m³/m²/hour)</label>
-        <input type="number" id="roofRainfallIntensity" name="roofRainfallIntensity" step="0.001" value="0.02">
+        <div class="input-wrapper">
+          <input type="number" id="roofRainfallIntensity" name="roofRainfallIntensity" step="0.001" value="0.02" data-step="0.001">
+          <button class="btn-minus" data-step="0.001">-</button>
+          <button class="btn-plus" data-step="0.001">+</button>
+        </div>
       </div>
       <div class="input-group">
         <label for="designDuration">Design Duration (hours)</label>
-        <input type="number" id="designDuration" name="designDuration" value="6">
+        <div class="input-wrapper">
+          <input type="number" id="designDuration" name="designDuration" value="6" data-step="1">
+          <button class="btn-minus" data-step="1">-</button>
+          <button class="btn-plus" data-step="1">+</button>
+        </div>
       </div>
       <div class="input-group">
         <label for="bufferVolume">Buffer Volume (m³)</label>
-        <input type="number" id="bufferVolume" name="bufferVolume" value="50">
+        <div class="input-wrapper">
+          <input type="number" id="bufferVolume" name="bufferVolume" value="50" data-step="10">
+          <button class="btn-minus" data-step="10">-</button>
+          <button class="btn-plus" data-step="10">+</button>
+        </div>
       </div>
       <div class="input-group">
         <label for="pumpCapacity">Pump Capacity (m³/hour)</label>
-        <input type="number" id="pumpCapacity" name="pumpCapacity" value="7.2">
+        <div class="input-wrapper">
+          <input type="number" id="pumpCapacity" name="pumpCapacity" value="7.2" data-step="0.1">
+          <button class="btn-minus" data-step="0.1">-</button>
+          <button class="btn-plus" data-step="0.1">+</button>
+        </div>
       </div>
       <div class="input-group">
         <label for="numberOfPumps">Number of Pumps</label>
-        <input type="number" id="numberOfPumps" name="numberOfPumps" min="1" max="2" value="1">
+        <div class="input-wrapper">
+          <input type="number" id="numberOfPumps" name="numberOfPumps" min="1" max="3" value="1" data-step="1">
+          <button class="btn-minus" data-step="1">-</button>
+          <button class="btn-plus" data-step="1">+</button>
+        </div>
       </div>
     </div>
 
@@ -119,6 +143,3 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="buffer.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-annotation"></script>
-</body>
-
-</html>

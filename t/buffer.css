@@ -97,11 +97,21 @@ header h1 {
     margin-bottom: 40px;
 }
 
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
 .input-group label {
     font-size: 1.1rem;
     color: #373431;
-    margin-bottom: 5px;
-    display: block;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between input and buttons */
 }
 
 .input-group input {
@@ -118,7 +128,32 @@ header h1 {
 
 .input-group input:focus {
     background: rgba(72, 155, 160, 0.2);
-    border-color: #2DD4E0; /* Highlight border on focus */
+    border-color: #2DD4E0;
+}
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #fff;
+    background: #489BA0;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:disabled {
+    background: #A2D1D4;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background: #2DD4E0;
+}
+
+button:active {
+    transform: scale(0.95);
 }
 
 /* Results Section */
