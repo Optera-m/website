@@ -3,7 +3,7 @@ const footerElement = document.querySelector("footer");
 
 const fetchHeader = async () => {
   try {
-    const res = await fetch("./header.txt");
+    const res = await fetch("/header.txt");
     const template = await res.text();
 
     headerElement.innerHTML = template;
