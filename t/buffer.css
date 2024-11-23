@@ -1,0 +1,221 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F8FAFA; /* Light background */
+    color: #373431; /* Dark almost-black text */
+    font-family: 'Helvetica Neue', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Container */
+.container {
+    background: rgba(255, 255, 255, 0.9); /* Slight white background with transparency */
+    border-radius: 15px;
+    padding: 40px;
+    width: 100%;
+    max-width: 1200px; /* Increase max width for more space */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    justify-content: flex-start;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+/* Header */
+header h1 {
+    font-size: 2.5rem;
+    color: #373431;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Alert (Industry Standards Reference Section) */
+.alert {
+    background: rgba(72, 155, 160, 0.1); /* Light teal background */
+    border-radius: 15px;
+    margin-bottom: 30px;
+    padding: 20px;
+    width: 100%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.alert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #373431;
+    font-weight: 600;
+}
+
+.alert-content {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #373431;
+    display: none;
+}
+
+.alert.show .alert-content {
+    display: block;
+}
+
+.alert-header svg {
+    fill: #373431;
+    transition: transform 0.3s ease;
+}
+
+.alert.show .alert-header svg {
+    transform: rotate(180deg);
+}
+
+/* Input Section */
+.input-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.input-group label {
+    font-size: 1.1rem;
+    color: #373431;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.input-group input {
+    padding: 14px;
+    font-size: 1.2rem;
+    background: rgba(72, 155, 160, 0.1);
+    color: #373431;
+    border: 1px solid #A2D1D4;
+    border-radius: 10px;
+    outline: none;
+    transition: background 0.3s ease, border-color 0.3s ease;
+    width: 100%;
+}
+
+.input-group input:focus {
+    background: rgba(72, 155, 160, 0.2);
+    border-color: #2DD4E0; /* Highlight border on focus */
+}
+
+/* Results Section */
+.results-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.results-section {
+    flex: 1; /* Allow results section to grow */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.results-section h2 {
+    color: #489BA0;
+    font-size: 1.6rem;
+}
+
+/* Detailed Calculations Section */
+#calculations {
+    background: rgba(72, 155, 160, 0.05); /* Light background */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+    flex: 1; /* Take up remaining space */
+}
+
+#calculations p {
+    font-size: 1.1rem;
+    margin: 12px 0;
+}
+
+/* Chart Section */
+.charts-wrapper {
+    display: flex;
+    flex: 1; /* Allow the chart section to grow */
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.chart-section {
+    flex: 1;
+    width: 100%; /* Set the chart section width to 48% */
+}
+
+.chart-section canvas {
+    width: 100%;
+    max-height: 350px;
+    border-radius: 15px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #373431;
+    margin-top: 50px;
+    font-size: 0.9rem;
+}
+
+.alert::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #489BA0; /* Teal line */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .input-section {
+        grid-template-columns: 1fr;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .charts-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .chart-section {
+        width: 100%;
+        margin-left: 0; /* Remove left margin on small screens */
+    }
+
+    #calculations {
+        margin-bottom: 20px; /* Adjust bottom margin for smaller screens */
+    }
+
+    .results-wrapper {
+        flex-direction: column;
+    }
+}
