@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateCharts(rainwaterFlowVolume,totalRainfallVolume, totalPumpCapacity, bufferVolume, designDuration, parkingRainfallIntensity, roofRainfallIntensity, pumpCapacity, numberOfPumps) {
         // Buffer Volume Bar Chart
         const barData = {
-            labels: ['Totaal Volume Regenwater', 'Totale Pomp Capaciteit', 'Buffer Volume'],
+            labels: ['Regenwater', 'Pomp', 'Buffer'],
             datasets: [
                 {
                     label: 'Volume (m³)',
