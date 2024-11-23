@@ -202,8 +202,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Add event listeners for buttons
     buttons.forEach((button) => {
-        button.addEventListener("touchstart", (e) => {
-            e.preventDefault();
         button.addEventListener("click", (e) => {
             const input = e.target.parentElement.querySelector("input");
             const step = parseFloat(button.getAttribute("data-step"));
