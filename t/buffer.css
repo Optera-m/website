@@ -133,7 +133,9 @@ header h1 {
 
 /* Buttons */
 button {
-    padding: 10px 20px;
+    box-sizing: border-box;
+    padding: 15px 20px;
+    width: 53px;
     font-size: 1.2rem;
     color: #fff;
     background: #489BA0;
