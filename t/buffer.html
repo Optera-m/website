@@ -26,84 +26,99 @@
         </svg>
       </div>
       <div class="alert-content">
-        <p><strong>Rainfall Intensity (m³/m²/hour):</strong></p>
-        <ul>
-          <li>Light Rain: 0.01 (10mm/hour)</li>
-          <li>Moderate Rain: 0.02 (20mm/hour)</li>
-          <li>Heavy Rain: 0.03 (30mm/hour)</li>
-          <li>Extreme Rain: 0.05 (50mm/hour)</li>
-          <li><strong>Typical Parking Area Rainfall Intensity:</strong> 0.015 (15mm/hour)</li>
-          <li><strong>Typical Roof Area Rainfall Intensity:</strong> 0.02 (20mm/hour)</li>
-        </ul>
-        <p><strong>Design Storm Return Periods:</strong></p>
-        <ul>
-          <li>1-year storm: 0.025 (25mm/hour)</li>
-          <li>10-year storm: 0.045 (45mm/hour)</li>
-          <li>100-year storm: 0.07 (70mm/hour)</li>
-        </ul>
-        <p><strong>Typical Design Durations:</strong></p>
-        <ul>
-          <li>Minimum: 2 hours</li>
-          <li>Typical: 6 hours</li>
-          <li>Extended: 24 hours</li>
-          <li>Extreme: 72 hours</li>
-        </ul>
-        <p><strong>Buffer Sizing Guidelines:</strong></p>
-        <ul>
-          <li>Minimum: 1 hour retention</li>
-          <li>Typical: 4 hours retention</li>
-          <li>Conservative: 8 hours retention</li>
-        </ul>
+          <h3>What is this program calculating?</h3>
+          <ul>
+              <li>
+                  <strong>Total Surface Area:</strong>
+                  The combined surface area of the catchment zones (<code>C10</code>, <code>C09</code>, <code>C05</code>, and <code>C03</code>).
+              </li>
+              <li>
+                  <strong>Effective Surface Area:</strong>
+                  Adjusted surface area accounting for runoff coefficients:
+                  <ul>
+                      <li><code>C10</code>: 100% of the area contributes to runoff.</li>
+                      <li><code>C09</code>: 90% of the area contributes to runoff.</li>
+                      <li><code>C05</code>: 50% of the area contributes to runoff.</li>
+                      <li><code>C03</code>: 30% of the area contributes to runoff.</li>
+                  </ul>
+              </li>
+              <li>
+                  <strong>Rainfall:</strong>
+                  The rainfall intensity data is taken from official or calculated datasets based on return intervals (e.g., 10-year intensity values). This program uses linear interpolation to estimate rainfall at different time intervals.
+              </li>
+              <li>
+                  <strong>Buffer Volume:</strong>
+                  The required storage capacity (buffer) to prevent flooding is calculated as:
+                  <ul>
+                      <li>
+                          Rainfall volume = <code>(rainfall in m) * (effective surface area in m²)</code>.
+                      </li>
+                      <li>
+                          Pumped volume = <code>(pump capacity in m³/h) * (time in hours)</code>.
+                      </li>
+                      <li>
+                          Buffer required = <code>Rainfall volume - Pumped volume</code>.
+                      </li>
+                  </ul>
+              </li>
+              <li>
+                  <strong>Pump Capacity:</strong>
+                  The combined pumping capacity of all pumps is used to calculate how much water can be removed from the buffer over time.
+              </li>
+              <li>
+                  <strong>Maximum Buffer Volume:</strong>
+                  The largest buffer size needed during the calculation period, considering rainfall and pumping capacity.
+              </li>
+              <li>
+                  <strong>Time to Empty Buffer:</strong>
+                  The time required to completely empty the buffer, assuming no additional rainfall and that the pumps are operating continuously.
+              </li>
+              <li>
+                  <strong>System Adequacy:</strong>
+                  Determines whether the system is sufficient based on whether the buffer can be emptied within 24 hours.
+              </li>
+          </ul>
+          <h3>Values Used</h3>
+          <ul>
+              <li><strong>Surface Area (C10, C09, C05, C03):</strong> User-provided.</li>
+              <li><strong>Pump Capacity:</strong> User-provided in m³/h.</li>
+              <li><strong>Number of Pumps:</strong> User-provided.</li>
+              <li><strong>Rainfall Data:</strong> Predefined dataset with interpolation for custom intervals.</li>
+          </ul>
       </div>
     </div>
 
     <div class="input-section">
       <div class="input-group">
-        <label for="parkingArea">Parking Area (m²)</label>
+        <label for="oppervlakC10">Dak Oppervlak C = 1</label>
         <div class="input-wrapper">
-          <input type="number" id="parkingArea" name="parkingArea" value="0" step="100" data-step="100">
+          <input type="number" id="oppervlakC10" name="oppervlakC10" value="0" step="100" data-step="100">
           <button class="btn-minus" data-step="100">-</button>
           <button class="btn-plus" data-step="100">+</button>
         </div>
       </div>
       <div class="input-group">
-        <label for="roofArea">Roof Area (m²)</label>
+        <label for="oppervlakC09">Ondoorlaatbaar Oppervlak C = 0.9</label>
         <div class="input-wrapper">
-          <input type="number" id="roofArea" name="roofArea" value="500" step="100" data-step="100">
+          <input type="number" id="oppervlakC09" name="oppervlakC09" value="500" step="100" data-step="100">
           <button class="btn-minus" data-step="100">-</button>
           <button class="btn-plus" data-step="100">+</button>
         </div>
       </div>
       <div class="input-group">
-        <label for="parkingRainfallIntensity">Rainfall Intensity Parking (m³/m²/hour)</label>
+        <label for="oppervlakC05">Semi Permeabel Oppervlak C = 0.5</label>
         <div class="input-wrapper">
-          <input type="number" id="parkingRainfallIntensity" name="parkingRainfallIntensity" step="0.001" value="0.015" data-step="0.001">
-          <button class="btn-minus" data-step="0.001">-</button>
-          <button class="btn-plus" data-step="0.001">+</button>
+          <input type="number" id="oppervlakC05" name="oppervlakC05" step="100" value="0" data-step="100">
+          <button class="btn-minus" data-step="100">-</button>
+          <button class="btn-plus" data-step="100">+</button>
         </div>
       </div>
       <div class="input-group">
-        <label for="roofRainfallIntensity">Rainfall Intensity Roof (m³/m²/hour)</label>
+        <label for="oppervlakC03">Doorlaatbaar Oppervlak C = 0.3</label>
         <div class="input-wrapper">
-          <input type="number" id="roofRainfallIntensity" name="roofRainfallIntensity" step="0.001" value="0.02" data-step="0.001">
-          <button class="btn-minus" data-step="0.001">-</button>
-          <button class="btn-plus" data-step="0.001">+</button>
-        </div>
-      </div>
-      <div class="input-group">
-        <label for="designDuration">Design Duration (hours)</label>
-        <div class="input-wrapper">
-          <input type="number" id="designDuration" name="designDuration" value="6" data-step="1">
-          <button class="btn-minus" data-step="1">-</button>
-          <button class="btn-plus" data-step="1">+</button>
-        </div>
-      </div>
-      <div class="input-group">
-        <label for="bufferVolume">Buffer Volume (m³)</label>
-        <div class="input-wrapper">
-          <input type="number" id="bufferVolume" name="bufferVolume" value="50" data-step="10">
-          <button class="btn-minus" data-step="10">-</button>
-          <button class="btn-plus" data-step="10">+</button>
+          <input type="number" id="oppervlakC03" name="oppervlakC03" step="100" value="0" data-step="100">
+          <button class="btn-minus" data-step="100">-</button>
+          <button class="btn-plus" data-step="100">+</button>
         </div>
       </div>
       <div class="input-group">
@@ -130,9 +145,6 @@
         <div id="calculations"></div>
       </div>
       <div class="charts-wrapper">
-        <div class="chart-section">
-          <canvas id="bufferChart"></canvas>
-        </div>
         <div class="chart-section">
           <canvas id="waterLevelChart"></canvas>
         </div>
