@@ -106,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const waterLevelData = {
-            labels: timeSteps.map(t => `${t}min`),
+            labels: timeSteps.map(t => `${t < 60 ? `${(t)} min` : `${(t/60)} uur`}`),
             datasets: [
                 {
                     label: 'Water Level (m³)',
@@ -144,8 +144,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 scales: {
                     x: {
                         title: {
-                            display: true,
-                            text: 'Tijd (uur)',
+                            display: false,
+                            text: 'Tijd (min)',
                         },
                     },
                     y: {

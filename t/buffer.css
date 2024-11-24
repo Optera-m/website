@@ -256,6 +256,9 @@ footer {
         width: 100%; /* Full width for charts */
         max-height: 1000px; /* Increase chart height on small screens */
     }
+    .chart-section canvas {
+        max-height: 600px; /* Increase max height on smaller screens */
+    }
 
     #calculations {
         margin-bottom: 20px; /* Adjust bottom margin for smaller screens */
