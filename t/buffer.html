@@ -26,71 +26,73 @@
         </svg>
       </div>
       <div class="alert-content">
-          <h3>What is this program calculating?</h3>
+          <h3>Wat berekent dit programma?</h3>
           <ul>
               <li>
-                  <strong>Total Surface Area:</strong>
-                  The combined surface area of the catchment zones (<code>C10</code>, <code>C09</code>, <code>C05</code>, and <code>C03</code>).
+                  <strong>Totaal Oppervlakte:</strong>
+                  De gecombineerde oppervlakte van de opvangzones (<code>C10</code>, <code>C09</code>, <code>C05</code> en <code>C03</code>).
               </li>
               <li>
-                  <strong>Effective Surface Area:</strong>
-                  Adjusted surface area accounting for runoff coefficients:
+                <strong>Effectieve Oppervlakte:</strong>
+                Aangepaste oppervlakte rekening houdend met afvloeiingscoëfficiënten, die de verhouding aangeven tussen de hoeveelheid afvloeiing en de neerslag die valt. Gebieden met lage infiltratie en veel afvloeiing (bijv. verharding, steile hellingen) hebben hogere waarden, terwijl permeabele, goed begroeide gebieden (zoals bossen of vlak land) lagere waarden hebben:
+                <ul>
+                    <li><code>C10</code>: 100% van het gebied draagt bij aan de afvloeiing. Bijvoorbeeld asfaltwegen of betonoppervlakken in stadscentra, waar de volledige oppervlakte het water snel afvoert naar het riool.</li>
+                    <li><code>C09</code>: 90% van het gebied draagt bij aan de afvloeiing. Dit kan gelden voor een stedelijk woongebied met voornamelijk verharde oppervlakken, zoals een gebied met parkeerplaatsen of een industrieterrein waar weinig infiltratie plaatsvindt.</li>
+                    <li><code>C05</code>: 50% van het gebied draagt bij aan de afvloeiing. Dit zou bijvoorbeeld kunnen gelden voor een grasveld met een gematigde helling, waar de helft van de neerslag wordt afgevoerd en de andere helft in de bodem trekt.</li>
+                    <li><code>C03</code>: 30% van het gebied draagt bij aan de afvloeiing. Dit is typisch voor een bosgebied of weiland met een hoge mate van infiltratie, waar slechts een klein deel van de neerslag als afvloeiing naar het oppervlaktewater gaat.</li>
+                </ul>
+            </li>
+            
+            
+              <li>
+                  <strong>Neerslag:</strong>
+                  De neerslagintensiteit wordt gehaald uit officiële of berekende datasets op basis van terugkeerintervallen (bijv. 10-jaars intensiteitswaarden). Dit programma gebruikt lineaire interpolatie om de neerslag bij verschillende tijdsintervallen te schatten.
+              </li>
+              <li>
+                  <strong>Buffervolume:</strong>
+                  De vereiste opslagcapaciteit (buffer) om overstromingen te voorkomen wordt berekend als:
                   <ul>
-                      <li><code>C10</code>: 100% of the area contributes to runoff.</li>
-                      <li><code>C09</code>: 90% of the area contributes to runoff.</li>
-                      <li><code>C05</code>: 50% of the area contributes to runoff.</li>
-                      <li><code>C03</code>: 30% of the area contributes to runoff.</li>
+                      <li>
+                          Neerslagvolume = <code>(neerslag in m) * (effectieve oppervlakte in m²)</code>.
+                      </li>
+                      <li>
+                          Gepompte volume = <code>(pompcapaciteit in m³/u) * (tijd in uren)</code>.
+                      </li>
+                      <li>
+                          Vereiste buffer = <code>Neerslagvolume - Gepompte volume</code>.
+                      </li>
                   </ul>
               </li>
               <li>
-                  <strong>Rainfall:</strong>
-                  The rainfall intensity data is taken from official or calculated datasets based on return intervals (e.g., 10-year intensity values). This program uses linear interpolation to estimate rainfall at different time intervals.
+                  <strong>Pompcapaciteit:</strong>
+                  De gecombineerde pompcapaciteit van alle pompen wordt gebruikt om te berekenen hoeveel water uit de buffer kan worden verwijderd over tijd.
               </li>
               <li>
-                  <strong>Buffer Volume:</strong>
-                  The required storage capacity (buffer) to prevent flooding is calculated as:
-                  <ul>
-                      <li>
-                          Rainfall volume = <code>(rainfall in m) * (effective surface area in m²)</code>.
-                      </li>
-                      <li>
-                          Pumped volume = <code>(pump capacity in m³/h) * (time in hours)</code>.
-                      </li>
-                      <li>
-                          Buffer required = <code>Rainfall volume - Pumped volume</code>.
-                      </li>
-                  </ul>
+                  <strong>Maximaal Buffervolume:</strong>
+                  De grootste buffermaat die nodig is tijdens de berekeningsperiode, rekening houdend met neerslag en pompcapaciteit.
               </li>
               <li>
-                  <strong>Pump Capacity:</strong>
-                  The combined pumping capacity of all pumps is used to calculate how much water can be removed from the buffer over time.
+                  <strong>Tijd om de Buffer te Leeg te Maken:</strong>
+                  De tijd die nodig is om de buffer volledig leeg te maken, ervan uitgaande dat er geen extra neerslag valt en dat de pompen continu werken.
               </li>
               <li>
-                  <strong>Maximum Buffer Volume:</strong>
-                  The largest buffer size needed during the calculation period, considering rainfall and pumping capacity.
-              </li>
-              <li>
-                  <strong>Time to Empty Buffer:</strong>
-                  The time required to completely empty the buffer, assuming no additional rainfall and that the pumps are operating continuously.
-              </li>
-              <li>
-                  <strong>System Adequacy:</strong>
-                  Determines whether the system is sufficient based on whether the buffer can be emptied within 24 hours.
+                  <strong>Systeemgeschiktheid:</strong>
+                  Bepaalt of het systeem voldoende is op basis van of de buffer binnen 24 uur geleegd kan worden.
               </li>
           </ul>
-          <h3>Values Used</h3>
+          <h3>Gebruikte Waarden</h3>
           <ul>
-              <li><strong>Surface Area (C10, C09, C05, C03):</strong> User-provided.</li>
-              <li><strong>Pump Capacity:</strong> User-provided in m³/h.</li>
-              <li><strong>Number of Pumps:</strong> User-provided.</li>
-              <li><strong>Rainfall Data:</strong> Predefined dataset with interpolation for custom intervals.</li>
-          </ul>
+              <li><strong>Oppervlakte (C10, C09, C05, C03):</strong> Door de gebruiker opgegeven.</li>
+              <li><strong>Pompcapaciteit:</strong> Door de gebruiker opgegeven in m³/u.</li>
+              <li><strong>Aantal Pompen:</strong> Door de gebruiker opgegeven.</li>
+              <li><strong>Neerslaggegevens:</strong> Vooraf gedefinieerde dataset met interpolatie voor aangepaste intervallen.</li>
+          </ul>      
       </div>
     </div>
 
     <div class="input-section">
       <div class="input-group">
-        <label for="oppervlakC10">Dak Oppervlak C = 1</label>
+        <label for="oppervlakC10">Oppervlak C = 1 [m²]</label>
         <div class="input-wrapper">
           <input type="number" id="oppervlakC10" name="oppervlakC10" value="0" step="100" data-step="100">
           <button class="btn-minus" data-step="100">-</button>
@@ -98,7 +100,7 @@
         </div>
       </div>
       <div class="input-group">
-        <label for="oppervlakC09">Ondoorlaatbaar Oppervlak C = 0.9</label>
+        <label for="oppervlakC09">Ondoorlaatbaar Oppervlak C = 0.9 [m²]</label>
         <div class="input-wrapper">
           <input type="number" id="oppervlakC09" name="oppervlakC09" value="500" step="100" data-step="100">
           <button class="btn-minus" data-step="100">-</button>
@@ -106,7 +108,7 @@
         </div>
       </div>
       <div class="input-group">
-        <label for="oppervlakC05">Semi Permeabel Oppervlak C = 0.5</label>
+        <label for="oppervlakC05">Semi Permeabel Oppervlak C = 0.5 [m²]</label>
         <div class="input-wrapper">
           <input type="number" id="oppervlakC05" name="oppervlakC05" step="100" value="0" data-step="100">
           <button class="btn-minus" data-step="100">-</button>
@@ -114,7 +116,7 @@
         </div>
       </div>
       <div class="input-group">
-        <label for="oppervlakC03">Doorlaatbaar Oppervlak C = 0.3</label>
+        <label for="oppervlakC03">Doorlaatbaar Oppervlak C = 0.3 [m²]</label>
         <div class="input-wrapper">
           <input type="number" id="oppervlakC03" name="oppervlakC03" step="100" value="0" data-step="100">
           <button class="btn-minus" data-step="100">-</button>
@@ -122,7 +124,7 @@
         </div>
       </div>
       <div class="input-group">
-        <label for="pumpCapacity">Pump Capacity (m³/hour)</label>
+        <label for="pumpCapacity">Pomp Debiet (m³/uur)</label>
         <div class="input-wrapper">
           <input type="number" id="pumpCapacity" name="pumpCapacity" value="7.2" data-step="0.1">
           <button class="btn-minus" data-step="0.1">-</button>
@@ -130,7 +132,7 @@
         </div>
       </div>
       <div class="input-group">
-        <label for="numberOfPumps">Number of Pumps</label>
+        <label for="numberOfPumps">Aantal Pompen</label>
         <div class="input-wrapper">
           <input type="number" id="numberOfPumps" name="numberOfPumps" min="1" max="3" value="1" data-step="1">
           <button class="btn-minus" data-step="1">-</button>
@@ -141,7 +143,7 @@
 
     <div class="results-wrapper">
       <div class="results-section">
-        <h2>Calculations</h2>
+        <h2>Berekeningen</h2>
         <div id="calculations"></div>
       </div>
       <div class="charts-wrapper">
