@@ -111,8 +111,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 {
                     label: 'Water Level (m³)',
                     data: waterLevels,
-                    backgroundColor: 'rgba(0, 123, 255, 0.5)',
-                    borderColor: '#007bff',
+                    backgroundColor: 'rgba(45, 212, 224, 0.5)',
+                    borderColor: '#2DD4E0',
                     fill: true,
                 },
             ],
