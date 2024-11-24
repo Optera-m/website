@@ -88,8 +88,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function displayResults(effectiefOppervlak, pumpCapacity, numberOfPumps,maximumBuffer,totaalOppervlak,bufferEmptyTime) {
         calculationsDiv.innerHTML = `
-            <p><strong>Totaal Oppervlak:</strong> ${totaalOppervlak.toFixed(2)} m²</p>
-            <p><strong>Effectief Oppervlak:</strong> ${effectiefOppervlak.toFixed(2)} m²</p>
+            <p><strong>Totaal Oppervlak:</strong> ${totaalOppervlak.toFixed(0)} m²</p>
+            <p><strong>Effectief Oppervlak:</strong> ${effectiefOppervlak.toFixed(0)} m²</p>
             <p><strong>Pomp Capaciteit:</strong> ${numberOfPumps.toFixed(0)} * ${pumpCapacity.toFixed(2)} m³/uur = ${pumpCapacity.toFixed(2) * numberOfPumps.toFixed(2)} m³/uur</p>
             <p><strong>Benodigde Buffer:</strong> ${maximumBuffer.toFixed(2)} m³</p>
             <p><strong>Tijd tot buffer leeg:</strong> ${bufferEmptyTime.toFixed(2)} uur</p>
