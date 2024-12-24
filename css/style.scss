@@ -405,15 +405,15 @@ a:focus {
 
       &:hover,
       &.active {
-        background-color: $primary2;
-        color: $white;
+        //background-color: $primary2;
+        //color: $white;
 
         .img-box {
           svg {
-            fill: $white;
+            //fill: $white;
 
             path {
-              fill: $white;
+              //fill: $white;
             }
           }
         }

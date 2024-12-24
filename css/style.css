@@ -297,17 +297,6 @@ a:focus {
   font-family: "Plus Jakarta Sans", sans-serif;
   margin-bottom: 0;
 }
-.feature_section .feature_container .box:hover, .feature_section .feature_container .box.active {
-  background-color: #489BA1;
-  color: #ffffff;
-}
-.feature_section .feature_container .box:hover .img-box svg, .feature_section .feature_container .box.active .img-box svg {
-  fill: #ffffff;
-}
-.feature_section .feature_container .box:hover .img-box svg path, .feature_section .feature_container .box.active .img-box svg path {
-  fill: #ffffff;
-}
-
 .about_section .row {
   align-items: center;
 }
