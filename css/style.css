@@ -704,6 +704,9 @@ a:focus {
   .qr-landing .container {
     padding: 15px;
   }
+  .qr-landing .header_section {
+    color: #fbaf5d;
+  }
   .qr-landing .landing-btn {
     width: 100%;
     text-align: center;
