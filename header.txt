@@ -4,7 +4,7 @@
             <a href="tel:0032469477694">
               <i class="fa fa-phone" aria-hidden="true"></i>
               <span>
-                Bel ons : +32469477694
+                Tel: +32 469 47 76 94
               </span>
             </a>
             <a href="mailto:maarten@optera.be">
