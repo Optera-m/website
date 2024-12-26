@@ -327,25 +327,25 @@ a:focus {
   width: 100%;
 }
 
-.professional_section {
+.secondary_section {
   background-color: #A3D1D4;
 }
-.professional_section .row {
+.secondary_section .row {
   align-items: center;
 }
-.professional_section .img-box img {
+.secondary_section .img-box img {
   width: 100%;
   height: 10%;
 }
-.professional_section .detail-box h2 {
+.secondary_section .detail-box h2 {
   text-transform: uppercase;
   font-weight: bold;
   color: #36322F;
 }
-.professional_section .detail-box p {
+.secondary_section .detail-box p {
   margin-top: 20px;
 }
-.professional_section .detail-box a {
+.secondary_section .detail-box a {
   margin-top: 25px;
   display: inline-block;
   font-family: "Plus Jakarta Sans", sans-serif;
@@ -356,7 +356,7 @@ a:focus {
   border-radius: 5px;
   color: #ffffff;
 }
-.professional_section .detail-box a:hover {
+.secondary_section .detail-box a:hover {
   background-color: transparent;
   color: #489BA1;
 }
