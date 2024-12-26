@@ -364,6 +364,10 @@ a:focus {
 .service_section {
   position: relative;
 }
+.service_section a {
+  text-decoration: none;
+  color: #36322F;
+}
 .service_section .box {
   margin-top: 30px;
   text-align: center;
@@ -527,7 +531,7 @@ a:focus {
   padding: 75px 0;
   background-color: #36322F;
   text-align: center;
-  color: #fff;
+  color: #ffffff;
 }
 .info_section h4 {
   text-transform: uppercase;
@@ -581,7 +585,7 @@ a:focus {
 }
 .info_items .item p {
   margin-top: 25px;
-  color: #fff;
+  color: #ffffff;
   margin-bottom: 0;
   background-color: #36322F;
 }
@@ -598,7 +602,7 @@ a:focus {
   top: 65px;
   width: 75%;
   height: 1px;
-  background-color: #fff;
+  background-color: #ffffff;
   left: 50%;
   transform: translateX(-50%);
 }

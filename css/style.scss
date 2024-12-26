@@ -502,6 +502,10 @@ a:focus {
 .service_section {
   position: relative;
 
+  a {
+    text-decoration: none;
+    color: $black;
+  }
   .box {
     margin-top: 30px;
     text-align: center;
