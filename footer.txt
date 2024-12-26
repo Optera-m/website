@@ -7,7 +7,7 @@
       <div class="col-lg-10 mx-auto">
         <div class="info_items">
           <div class="row">
-            <div class="col-md-4">
+            <div class="col-md-3">
               <a href="https://www.google.be/maps/place/Begijnhof+7,+3200+Aarschot">
                 <div class="item ">
                   <div class="img-box ">
@@ -19,7 +19,7 @@
                 </div>
               </a>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
               <a href="tel:0032469477694">
                 <div class="item ">
                   <div class="img-box ">
@@ -31,7 +31,7 @@
                 </div>
               </a>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
               <a href="mailto:maarten@optera.be">
                 <div class="item ">
                   <div class="img-box">
@@ -39,6 +39,18 @@
                   </div>
                   <p>
                     maarten@optera.be
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="col-md-3">
+              <a href="https://kbopub.economie.fgov.be/kbopub/zoeknummerform.html?nummer=1010799089">
+                <div class="item ">
+                  <div class="img-box">
+                    <i class="fa fa-briefcase" aria-hidden="true"></i>
+                  </div>
+                  <p>
+                    BE 1010.799.089
                   </p>
                 </div>
               </a>

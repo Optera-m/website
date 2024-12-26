@@ -691,7 +691,7 @@ a:focus {
   padding: 75px 0;
   background-color: $black;
   text-align: center;
-  color: #fff;
+  color: $white;
 
 
   h4 {
@@ -743,7 +743,7 @@ a:focus {
       width: 80px;
       height: 80px;
       border-radius: 100%;
-      background-color: #ffffff;
+      background-color: $white;
       background-repeat: no-repeat;
       background-position: center;
       text-align: center;
@@ -758,7 +758,7 @@ a:focus {
 
     p {
       margin-top: 25px;
-      color: #fff;
+      color: $white;
       margin-bottom: 0;
       background-color: $black;
     }
@@ -781,7 +781,7 @@ a:focus {
     top: 65px;
     width: 75%;
     height: 1px;
-    background-color: #fff;
+    background-color: $white;
     left: 50%;
     transform: translateX(-50%);
   }
