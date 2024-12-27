@@ -96,16 +96,11 @@ a:focus {
 }
 
 .flowy {
-  color: #fff;
   position: absolute;
   display: inline;
-  transform: translate(-100%, 0);
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
-}
-
-.flowy {
   color: #489BA1;
   animation: animate 4s ease-in-out infinite;
 }
