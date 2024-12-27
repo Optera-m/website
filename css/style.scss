@@ -160,7 +160,8 @@ a:focus {
   position: absolute;
   display: inline;
   transform: translate(-100%, 0);
-  user-select: none
+  user-select: none;
+  aria-hidden="true";
 }
 
 .flowy {
