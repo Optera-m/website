@@ -143,6 +143,9 @@ a:focus {
   transform: translate(-100%, 0);
   user-select: none;
   color: $primary2;
+  background: linear-gradient(to top,$primary1,$black);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   animation: flowy 4s ease-in-out infinite;
 }
 
