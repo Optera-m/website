@@ -155,23 +155,15 @@ a:focus {
 
 }
 
-.flowy1 {
-  color: #fff;
-  position: relative;
-  display: inline;
-}
-.flowy2 {
+.flowy {
   color: #fff;
   position: absolute;
   display: inline;
   transform: translate(-100%, 0);
+  user-select: none
 }
 
-.flowy1 {
-  color: $black;
-}
-
-.flowy2 {
+.flowy {
   color: $primary2;
   animation: animate 4s ease-in-out infinite;
 }
