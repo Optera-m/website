@@ -88,7 +88,7 @@ a:focus {
      -moz-user-select: none;
           user-select: none;
   color: #489BA1;
-  background: linear-gradient(to top, #2DD4E0, #36322F);
+  background: linear-gradient(to top, #2DD4E0 0%, #36322F 80%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   animation: flowy 4s ease-in-out infinite;
