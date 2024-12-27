@@ -29,6 +29,13 @@ body {
   padding-bottom: 120px;
 }
 
+a {
+  color: #489BA1;
+}
+a:hover {
+  color: #2DD4E0;
+}
+
 .heading_container {
   display: flex;
   flex-direction: column;

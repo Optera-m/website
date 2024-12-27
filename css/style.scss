@@ -1,7 +1,7 @@
 $white: #ffffff;
 $black: #36322F;
 $primary1: #2DD4E0;
-// $primary2:#e31414;
+$primary3:#E0762D;
 $primary2:#489BA1;
 $secondary: #A3D1D4;
 
@@ -76,6 +76,12 @@ body {
 
 .layout_padding-bottom {
   padding-bottom: 120px;
+}
+a {
+  color: $primary2;
+  &:hover {
+    color: $primary1;
+  }
 }
 
 .heading_container {
