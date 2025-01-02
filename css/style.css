@@ -272,6 +272,7 @@ a:focus {
 }
 .slider_section .img-box img {
   width: 70%;
+  aspect-ratio: 1383/2611;
 }
 
 .feature_section {
