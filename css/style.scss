@@ -379,7 +379,6 @@ a:focus {
     text-align: center;
     img {
       width: 70%;
-      aspect-ratio: 1383/2611;
     }
   }
 
@@ -834,6 +833,12 @@ a:focus {
 
 // end info section
 
+#imgslider {
+  aspect-ratio: 1383/2611;
+}
+#imgabout {
+  aspect-ratio: 3024/2419;
+}
 
 
 .qr-landing {

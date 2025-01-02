@@ -272,7 +272,6 @@ a:focus {
 }
 .slider_section .img-box img {
   width: 70%;
-  aspect-ratio: 1383/2611;
 }
 
 .feature_section {
@@ -630,6 +629,14 @@ a:focus {
   background-color: #ffffff;
   left: 50%;
   transform: translateX(-50%);
+}
+
+#imgslider {
+  aspect-ratio: 1383/2611;
+}
+
+#imgabout {
+  aspect-ratio: 3024/2419;
 }
 
 .qr-landing .container {
