@@ -1,9 +1,10 @@
 $white: #ffffff;
 $black: #36322F;
 $primary1: #2DD4E0;
-$primary3:#E0762D;
 $primary2:#489BA1;
+$primary3:#445F61;
 $secondary: #A3D1D4;
+
 
 // import fonts
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
@@ -50,7 +51,7 @@ $secondary: #A3D1D4;
 
 body {
   @include main-font;
-  color: #36322F;
+  color: $black;
 }
 
 .layout_padding {
@@ -363,7 +364,7 @@ a:focus {
     }
 
     p {
-      color: #444;
+      color: $black;
       font-size: 15px;
     }
 
@@ -587,6 +588,9 @@ a:focus {
           filter: brightness(0) invert(1);
         }
       }
+      a {
+        color: $white;
+      }
     }
   }
 
@@ -613,7 +617,7 @@ a:focus {
 
   .box {
     margin: 15px;
-    box-shadow: 0 0 10px 0 rgba($color: #000000, $alpha: .2);
+    box-shadow: 0 0 10px 0 rgba($color: $black, $alpha: .2);
     padding: 25px;
 
     .client_id {
@@ -643,7 +647,7 @@ a:focus {
           }
 
           i {
-            color: #fbaf5d;
+            color: $primary3;
           }
         }
       }
@@ -697,7 +701,7 @@ a:focus {
     background-color: $white;
     outline: none;
     color: $white;
-    box-shadow: 0 0 7px 0 rgba($color: #000000, $alpha: .2);
+    box-shadow: 0 0 7px 0 rgba($color: $black, $alpha: .2);
 
     &::placeholder {
       color: #737272;
@@ -941,11 +945,4 @@ a:focus {
       margin: 5px 0;
     }
   }
-}
-
-// Voeg deze class toe aan de body of een wrapper div van de landing page
-.qr-landing {
-  @include main-font;
-  color: $black;
-  background-color: #f5f5f5;
 }

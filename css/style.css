@@ -248,7 +248,7 @@ a:focus {
   color: #36322F;
 }
 .slider_section .detail-box p {
-  color: #444;
+  color: #36322F;
   font-size: 15px;
 }
 .slider_section .detail-box a {
@@ -426,6 +426,9 @@ a:focus {
 .service_section .box:hover .img-box img {
   filter: brightness(0) invert(1);
 }
+.service_section .box:hover a {
+  color: #ffffff;
+}
 .service_section .btn-box {
   display: flex;
   justify-content: center;
@@ -452,7 +455,7 @@ a:focus {
 }
 .client_section .box {
   margin: 15px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 10px 0 rgba(54, 50, 47, 0.2);
   padding: 25px;
 }
 .client_section .box .client_id {
@@ -478,7 +481,7 @@ a:focus {
   margin-bottom: 0;
 }
 .client_section .box .client_id .client_detail .client_info i {
-  color: #fbaf5d;
+  color: #445F61;
 }
 .client_section .box .client_text {
   margin-top: 20px;
@@ -513,7 +516,7 @@ a:focus {
   background-color: #ffffff;
   outline: none;
   color: #ffffff;
-  box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 7px 0 rgba(54, 50, 47, 0.2);
 }
 .contact_section input::-moz-placeholder {
   color: #737272;
@@ -729,10 +732,4 @@ a:focus {
     text-align: center;
     margin: 5px 0;
   }
-}
-
-.qr-landing {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  color: #36322F;
-  background-color: #f5f5f5;
 }/*# sourceMappingURL=style.css.map */

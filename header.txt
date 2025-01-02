@@ -4,13 +4,13 @@
             <a href="tel:0032469477694">
               <i class="fa fa-phone" aria-hidden="true"></i>
               <span>
-                Tel : +32469477694
+                +32469477694
               </span>
             </a>
             <a href="mailto:maarten@optera.be">
               <i class="fa fa-envelope" aria-hidden="true"></i>
               <span>
-                Email : maarten@optera.be
+                maarten@optera.be
               </span>
             </a>
           </div>
