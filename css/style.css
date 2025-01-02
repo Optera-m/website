@@ -413,8 +413,9 @@ a:focus {
 .service_section .box .detail-box {
   margin-top: 15px;
 }
-.service_section .box .detail-box h5 {
+.service_section .box .detail-box h3 {
   font-weight: bold;
+  font-size: 1.2rem;
 }
 .service_section .box .detail-box p {
   margin: 0;
