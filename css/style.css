@@ -137,6 +137,7 @@ a:focus {
     right: 0;
     background: #ffffff;
     z-index: 1000;
+    box-shadow: 0 0 15px 0 rgba(54, 50, 47, 0.2);
   }
   .custom_nav-container .navbar-nav.show {
     display: block;
