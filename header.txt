@@ -1,50 +1,44 @@
-<div class="header_top">
-        <div class="container-fluid">
-          <div class="contact_nav">
-            <a href="tel:0032469477694">
-              <i class="fa fa-phone" aria-hidden="true"></i>
-              <span>
-                +32469477694
-              </span>
-            </a>
-            <a href="mailto:maarten@optera.be">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>
-                maarten@optera.be
-              </span>
-            </a>
-          </div>
+  <div class="header_section">
+    <div class="header_top">
+      <div class="container-fluid">
+        <div class="contact_nav">
+          <a href="tel:0032469477694">
+            <i class="fa fa-phone"></i>
+            <span>+32469477694</span>
+          </a>
+          <a href="mailto:maarten@optera.be">
+            <i class="fa fa-envelope"></i>
+            <span>maarten@optera.be</span>
+          </a>
         </div>
       </div>
-      <div class="header_bottom">
-        <div class="container-fluid">
-          <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a class="navbar-brand" href="/index.html">
-              <span>
-                <img src="/images/optera logo zonder cirkel.svg" alt="Optera logo without circle">
-              </span>
-            </a>
-
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class=""> </span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav ">
-                <li class="nav-item">
-                  <a class="nav-link" href="/index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/about.html">Over</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/services">Services</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/contact.html">Updates</a>
-                </li>
-              </ul>
+    </div>
+    <div class="header_bottom">
+      <div class="container-fluid">
+        <nav class="custom_nav-container">
+          <a class="navbar-brand" href="/index.html">
+            <img src="/images/optera logo zonder cirkel.svg" alt="Optera logo">
+          </a>
+          <button class="navbar-toggler" type="button" onclick="toggleNav()" aria-expanded="false">
+            <span class="s-1"></span>
+            <span class="s-2"></span>
+            <span class="s-3"></span>
+          </button>
+          <div class="navbar-nav" id="navKnop">
+            <div class="nav-item">
+              <a class="nav-link" href="/index.html">Home</a>
             </div>
-          </nav>
-        </div>
+            <div class="nav-item">
+              <a class="nav-link" href="/about.html">Over</a>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link" href="/services">Services</a>
+            </div>
+            <div class="nav-item">
+              <a class="nav-link" href="/contact.html">Updates</a>
+            </div>
+          </div>
+        </nav>
       </div>
+    </div>
+  </div>

@@ -198,9 +198,28 @@ a:focus {
 
 .custom_nav-container {
   padding: 0;
+  position: relative;  // Added for positioning context
+  display: flex;       // Added for layout control
+  justify-content: space-between; // Added to space logo and nav
+  align-items: center; // Added for vertical alignment
 
   .navbar-nav {
     margin-left: auto;
+    flex-direction: row;
+    
+    @media (max-width: 768px) {
+      display: none;
+      margin: 15px 0;
+      position: absolute; // Added for overlay positioning
+      top: 100%;         // Position below header
+      right: 0;          // Align to right
+      background: $white; // Added background
+      z-index: 1000;     // Ensure it's above other content
+      
+      &.show {
+        display: block;
+      }
+    }
 
     .nav-item {
       .nav-link {
@@ -217,103 +236,74 @@ a:focus {
       }
     }
   }
-}
 
-
-
-.custom_nav-container .form-inline .nav_search-btn {
-  width: 35px;
-  height: 35px;
-  padding: 0;
-  border: none;
-  color: $black;
-
-  &:hover {
-    color: $primary1;
-  }
-}
-
-
-
-.custom_nav-container .navbar-toggler {
-  outline: none;
-}
-
-.custom_nav-container .navbar-toggler {
-  padding: 0;
-  width: 37px;
-  height: 42px;
-  transition: all .3s;
-
-  span {
-    display: block;
-    width: 35px;
-    height: 4px;
-    background-color: $black;
-    margin: 7px 0;
-    transition: all 0.3s;
-    position: relative;
-    border-radius: 5px;
+  // Hamburger button
+ .navbar-toggler {
+    padding: 0;
+    width: 37px;
+    height: 42px;
     transition: all .3s;
+    outline: none;
+    margin-left: auto; // Keep it on the right
+    border: none;
+    display: none;
 
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      height: 100%;
-      width: 100%;
-      background-color: $black;
-      top: -10px;
-      border-radius: 5px;
-      transition: all .3s;
+    @media (max-width: 768px) {
+      display: block;
     }
-
-    &::after {
-      top: 10px;
-    }
-  }
-
-  &[aria-expanded="true"] {
-    transform: rotate(360deg);
 
     span {
-      transform: rotate(45deg);
+      display: block;
+      width: 35px;
+      height: 4px;
+      background-color: $black;
+      margin: 7px 0;
+      transition: all 0.3s;
+      position: relative;
+      border-radius: 5px;
+    }
 
-      &::before,
-      &::after {
-        transform: rotate(90deg);
-        top: 0;
+    // Reset all other span pseudo-elements
+    span::before,
+    span::after {
+      display: none; // Remove the pseudo-elements
+    }
+
+    // Specific styling for each span
+    .s-1, .s-2, .s-3 {
+      transform: none;
+      margin: 7px 0;
+    }
+
+    &[aria-expanded="true"] {
+      transform: rotate(360deg);
+
+      .s-1 {
+        transform: rotate(45deg);
+        margin: 0;
+        margin-bottom: -4px;
+      }
+
+      .s-2 {
+        display: none;
+      }
+
+      .s-3 {
+        transform: rotate(-45deg);
+        margin: 0;
+        margin-top: -4px;
       }
     }
 
-    .s-1 {
-      transform: rotate(45deg);
-      margin: 0;
-      margin-bottom: -4px;
-    }
-
-    .s-2 {
-      display: none;
-    }
-
-    .s-3 {
-      transform: rotate(-45deg);
-      margin: 0;
-      margin-top: -4px;
-    }
-  }
-
-  &[aria-expanded="false"] {
-
-    .s-1,
-    .s-2,
-    .s-3 {
-      transform: none;
+    &[aria-expanded="false"] {
+      .s-1,
+      .s-2,
+      .s-3 {
+        transform: none;
+      }
     }
   }
 }
-
 .quote_btn-container {
   display: flex;
   align-items: center;
@@ -568,9 +558,8 @@ a:focus {
       margin-top: 15px;
 
       
-      h3 {
+      h5 {
         font-weight: bold;
-        font-size: 1.2rem
       }
 
       p {
@@ -833,12 +822,6 @@ a:focus {
 
 // end info section
 
-#imgslider {
-  aspect-ratio: 1383/2611;
-}
-#imgabout {
-  aspect-ratio: 3024/2419;
-}
 
 
 .qr-landing {

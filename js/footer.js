@@ -23,5 +23,13 @@ const fetchFooter = async () => {
   }
 };
 
+function toggleNav() {
+  const nav = document.getElementById('navKnop');
+  nav.classList.toggle('show');
+  const toggler = document.querySelector('.navbar-toggler');
+  const isExpanded = toggler.getAttribute('aria-expanded') === 'true';
+  toggler.setAttribute('aria-expanded', !isExpanded);
+}
+
 fetchHeader();
 fetchFooter();
