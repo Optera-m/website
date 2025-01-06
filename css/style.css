@@ -109,12 +109,10 @@ a:focus {
   margin: 0;
   color: #36322F;
   font-weight: bold;
-  font-size: 24px;
   font-weight: bold;
 }
 .navbar-brand span {
   color: #36322F;
-  text-transform: uppercase;
 }
 
 .custom_nav-container {
