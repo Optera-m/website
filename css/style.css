@@ -485,19 +485,6 @@ a:focus {
 .client_section .box .client_text {
   margin-top: 20px;
 }
-.client_section .owl-carousel .owl-nav {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
-.client_section .owl-carousel .owl-nav button {
-  width: 50px;
-  height: 50px;
-  background-color: #2DD4E0;
-  outline: none;
-  margin: 0 20px;
-  color: #ffffff;
-}
 
 .heading_container {
   margin-bottom: 30px;
