@@ -577,13 +577,14 @@ a:focus {
   width: 80px;
   height: 80px;
   border-radius: 100%;
-  background-color: #ffffff;
+  background-color: #2DD4E0;
   background-repeat: no-repeat;
   background-position: center;
   text-align: center;
   line-height: 80px;
-  background-color: #2DD4E0;
-  color: #ffffff;
+  background-color: #36322F;
+  color: #2DD4E0;
+  border: solid 1px #ffffff;
 }
 .info_items .item .img-box i {
   font-size: 24px;
@@ -595,7 +596,7 @@ a:focus {
   background-color: #36322F;
 }
 .info_items .item:hover .img-box {
-  background-color: #489BA1;
+  border: solid 3px #2DD4E0;
 }
 
 .info_items {
