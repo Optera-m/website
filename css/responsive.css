@@ -103,6 +103,9 @@
         }
         
     }
+    .slider_section .detail-box h1 {
+        font-size: 2.4rem;
+    }
     
 }
 
