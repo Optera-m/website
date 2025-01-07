@@ -17,7 +17,7 @@
       <div class="container-fluid">
         <nav class="custom_nav-container">
           <a class="navbar-brand" href="/index.html">
-            <img src="/images/optera logo zonder cirkel.svg" alt="Optera logo">
+            <img src="/images/mail-optera-logo.gif" width="42px" height="42px" alt="Optera logo">
           </a>
           <button class="navbar-toggler" type="button" onclick="toggleNav()" aria-expanded="false">
             <span class="s-1"></span>
