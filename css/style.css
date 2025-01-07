@@ -31,9 +31,10 @@ body {
 
 a {
   color: #489BA1;
+  transition: all 0.3s ease-out;
 }
 a:hover {
-  color: #2DD4E0;
+  color: #445F61;
 }
 
 .heading_center {
@@ -109,10 +110,13 @@ a:focus {
   margin: 0;
   color: #36322F;
   font-weight: bold;
-  font-weight: bold;
 }
 .navbar-brand span {
   color: #36322F;
+}
+.navbar-brand :hover {
+  transition: all 0.3s ease-out;
+  transform: rotate(-360deg);
 }
 
 .custom_nav-container {
@@ -598,7 +602,7 @@ a:focus {
 }
 .info_items .item:hover .img-box {
   border: solid 3px #2DD4E0;
-  transform: rotate(360deg);
+  transform: rotate(-360deg);
   transition: all 0.3s;
 }
 

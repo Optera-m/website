@@ -80,8 +80,9 @@ body {
 }
 a {
   color: $primary2;
+  transition: all 0.3s ease-out;
   &:hover {
-    color: $primary1;
+    color: $primary3;
   }
 }
 
@@ -187,11 +188,16 @@ a:focus {
   margin: 0;
   color: $black;
   font-weight: bold;
-  font-weight: bold;
+
 
   span {
     color: $black;
   }
+  :hover{
+    transition: all 0.3s ease-out;
+    transform: rotate(-360deg);
+  }
+  
 }
 
 .custom_nav-container {
@@ -782,7 +788,7 @@ a:focus {
     &:hover {
       .img-box {
         border: solid 3px $primary1;
-        transform: rotate(360deg);
+        transform: rotate(-360deg);
         transition: all .3s;
       }
     }
