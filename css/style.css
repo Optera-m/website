@@ -597,6 +597,8 @@ a:focus {
 }
 .info_items .item:hover .img-box {
   border: solid 3px #2DD4E0;
+  transform: rotate(360deg);
+  transition: all 0.3s;
 }
 
 .info_items {

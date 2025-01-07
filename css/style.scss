@@ -782,6 +782,8 @@ a:focus {
     &:hover {
       .img-box {
         border: solid 3px $primary1;
+        transform: rotate(360deg);
+        transition: all .3s;
       }
     }
   }
