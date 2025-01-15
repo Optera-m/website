@@ -65,6 +65,9 @@
       <a href="https://www.linkedin.com/company/opterabv">
         <i class="fa fa-linkedin" aria-label="Volg ons op linkedin"></i>
       </a>
+      <a href="https://wa.me/32469477694">
+        <i class="fa fa-whatsapp" aria-label="Volg ons op linkedin"></i>
+      </a>
     </div>
   </div>
 </section>
